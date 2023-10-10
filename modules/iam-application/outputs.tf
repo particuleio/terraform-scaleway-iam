@@ -10,3 +10,8 @@ output "updated_at" {
 output "editable" {
   value = scaleway_iam_application.this.editable
 }
+
+output "api_key" {
+  value     = scaleway_iam_api_key.this
+  sensitive = true
+}
