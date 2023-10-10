@@ -5,7 +5,7 @@ resource "scaleway_iam_application" "this" {
 }
 
 resource "scaleway_iam_api_key" "this" {
-  count          = var.create_apikey ? 0 : 1
+  count          = var.create_apikey ? 1 : 0
   description    = var.apikey_description
   application_id = scaleway_iam_application.this.id
   expires_at     = var.apikey_expires_at
