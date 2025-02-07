@@ -17,3 +17,8 @@ output "application_id" {
 output "policy_id" {
   value = module.policy.id
 }
+
+output "application" {
+  value     = module.application
+  sensitive = true
+}
